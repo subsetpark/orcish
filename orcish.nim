@@ -122,7 +122,7 @@ proc garble(sentence: string, proficiency = 0.0): string =
       garbledChar = currentChar
 
     let
-      randomSeed = random(5.0).int
+      randomSeed = random(5)
       key = (c: character, previous: previousChar, seed: randomSeed)
 
     if key in cache:
