@@ -16,16 +16,16 @@ const
   baseHardConsonants = [
     'b', 'c', 'd', 'f', 'g', 'j', 'k', 'p', 'q', 't', 'v', 'x', 'y', 'z'
   ]
-  baseSoftConsonants = ['h', 'l', 'n', 'r', 's', 'm', 'w', ]
+  baseSoftConsonants = ['h', 'l', 'm', 'n', 'r', 's', 'w', ]
   # Orcish Letter targets (duplicates allow for weighted probabilities)
   targetVowels = [
-    'a', 'e', 'o', 'u', 'a', 'e', 'o', 'a', 'o', 'i', '\''
+    '\'', 'a', 'a', 'a', 'e', 'e', 'i', 'o', 'o', 'o', 'u'
   ]
   targetHardConsonants = [
-    'b', 'c', 'd', 'f', 'g', 'j', 'k', '\'', 'n', 'p', 'r', 't', 'h', 'z', 'g', 'k', 't', 'g', '\''
+    '\'', '\'', 'b', 'c', 'd', 'f', 'g', 'g', 'g', 'h', 'j', 'k', 'k', 'n', 'p', 'r', 't', 't', 'z',
   ]
   targetSoftConsonants = [
-    'r', 'n', 'h', 'm', 'r', 'n', 'w', 's'
+    'h', 'm', 'n', 'n', 'r', 'r', 's', 'w'
   ]
   upperChars = {'A'..'Z'}
 
