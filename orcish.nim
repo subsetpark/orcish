@@ -130,6 +130,7 @@ proc garble(sentence: string, proficiency = 0.0): string =
       previousChar = some currentChar
     else:
       garbledChar = currentChar.garble(previousChar, randomSeed)
+      previousChar = some garbledChar
 
     if upperCased:
       garbledChar = (garbledChar.int - 32).char
