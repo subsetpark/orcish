@@ -125,12 +125,11 @@ proc garble(sentence: string, proficiency = 0.0): string =
       randomSeed = random(5)
       key = (c: character, previous: previousChar, seed: randomSeed)
 
-    if key in cache:
-      garbledChar = cache[key]
-      previousChar = some currentChar
-    else:
-      garbledChar = currentChar.garble(previousChar, randomSeed)
-      previousChar = some garbledChar
+    if key notin cache:
+      cache[key] = currentChar.garble(previousChar, randomSeed)
+
+    garbledChar = cache[key]
+    previousChar = some garbledChar
 
     if upperCased:
       garbledChar = (garbledChar.int - 32).char
