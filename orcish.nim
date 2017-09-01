@@ -1,6 +1,6 @@
 ## Nim port of orcish language converter by @pomalley.
 import tables, random, options, hashes, algorithm
-from strutils import `%`
+from strutils import nil
 
 proc hash(o: Option[char]): Hash =
   if o.isSome: hash(o.get)
