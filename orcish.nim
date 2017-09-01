@@ -35,8 +35,8 @@ type
 
 # Character properties
 
-proc canStartWord(c: char): bool = c != '\''
-proc mustStartSyllable(c: char): bool = c in {'f', 'b', 'w', 'j', 'n'}
+proc canStartWord(c: char): bool {.inline.} = c != '\''
+proc mustStartSyllable(c: char): bool {.inline.} = c in {'f', 'b', 'w', 'j', 'n'}
 proc invalidLeadUps(c: char): set[char] =
   case c
   of 'b': {'p', 'f', 'g', 't', 'k', 'c', 'h', 'n'}
